@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+main {
+  margin-top: auto;
+  padding-top: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-danger {
+  background-color: salmon;
+  border-color: salmon;
+}
+
+.btn-success {
+  background-color: #198754c9;
+  border-color: #198754c9;
+}
+
+.btn-outline-danger {
+  color: salmon;
+  border-color: salmon;
+}
+
+.alert-primary {
+  border-radius: 10px;
+}
+
+.alert-secondary {
+  border-radius: 10px;
+}
+
+.alert-danger {
+  border-radius: 10px;
+}
+
+.alert-success {
+  border-radius: 10px;
+}
+
+.alert-warning {
+  border-radius: 10px;
+}
+
+.alert-white {
+  color: white;
+  background-color: #6c757d;
+  border-radius: 10px;
+}
+
+.alert-notifications {
+  color: white;
+  background-color: salmon;
+  border-radius: 3px;
+}
+
+.logo-login {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 200px;
+  width: 200px;
+  padding: 0;
+  margin-top: 76px;
+  border-radius: 7px;
+}
+
+.logo-login:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo-signup {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 200px;
+  width: 200px;
+  padding: 0;
+  margin-top: 134px;
+  border-radius: 7px;
+}
+
+.logo-signup:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#view-password {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#card-search {
+  height: 670px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#card-profile-outer {
+  height: 845px;
+}
+
+#card-contact {
+  height: 630px;
+}
+
+#card-searchUp {
+  width: 650px;
+}
+
+#card-friend-search-outer {
+  width: 680px;
+}
+
+#card-friend-search {
+  height: 589px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#card-friend {
+  height: 551px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#homepage-center-image {
+  border-radius: 15px;
+  width: 400px;
+  height: 360px;
+}
+
+#homepage-center-profile-image {
+  border-radius: 15px;
+  width: 360px;
+  height: 360px;
+}
+
+#friendDiv {
+  text-align: right;
+  margin-left: 4px;
+}
+
+#right {
+  text-align: right;
+}
+
+#left {
+  text-align: left;
+}
+
+#center {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+#buttonFriend {
+  width: 86px;
+}
+
+#buttonSearchFriend {
+  width: 176px;
+}
+
+#buttonFriendActions {
+  min-width: 86px;
+}
+
+#black {
+  color: black;
+}
+
+#blackBold {
+  color: black;
+  font-weight: bold;
+}
+
+#white {
+  color: white;
+}
+
+#logo {
+  height: 36px;
+}
+
+#profileImage {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+#profileImgInFriends {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+#profileImgInFriendsActive {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  border: 2px solid green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#profileImgInFriendsInactive {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+#signup-form {
+  margin-top: 30px;
+}
+
+.span-blue {
+  color: #0d6efd;
+}
+
+#blue {
+  color: #0d6efd;
+}
+
+#salmon {
+  color: salmon;
+}
+
+#underline {
+  text-decoration: underline;
+}
+#button-delete-profile-img {
+  margin-top: 3px;
+}
+#button-delete {
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+#faForgot {
+  font-size: 100px;
+}
+
+#max-width {
+  width: 100%;
+  border-radius: 7px;
+}
+
+#blackBigUsername {
+  color: black;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+#new-eye {
+  text-align: center;
+  vertical-align: -0.55rem;
+}
+
+#eye {
+  text-align: center;
+  vertical-align: -0.55rem;
+}
+
+#eye2 {
+  text-align: center;
+  vertical-align: -0.55rem;
+}
+
+#new-eye2 {
+  text-align: center;
+  vertical-align: -0.55rem;
+}
+
+.onlineColor {
+  color: lightgreen;
+}
+
+.offlineColor {
+  color: salmon;
+}
+
+/* Responsive height utility class */
+.responsive-height {
+  min-height: 100vh;
+  align-items: center;
+}
+
+@media (max-height: 700px) {
+  .responsive-height {
+    min-height: calc(100vh - 80px);
+    align-items: flex-start;
+    padding-top: 80px;
+  }
+}
+
+@media (max-height: 500px) {
+  .responsive-height {
+    padding-top: 70px;
+  }
+}
+
+/* Responsive container utility */
+.responsive-container {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-height: 700px) {
+  .responsive-container {
+    margin-top: 1rem;
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .responsive-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*  Pulse effect for active friends */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}
+
+#profileImgInFriendsActive:hover {
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": ""
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4.4",
+        "phpmailer/phpmailer": "^6",
+        "ext-mysqli": "*",
+        "firebase/php-jwt": "*",
+        "psr/http-message": "*"
+    }
+}

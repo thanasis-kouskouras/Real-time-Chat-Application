@@ -1,0 +1,82 @@
+# Temporary files
+tmp/
+temp/
+temporary/
+
+# Upload directory
+uploads/
+
+# Vendor dependencies
+vendor/
+composer.phar
+
+# Log files
+*.log
+error_log
+php_errors.log
+access.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Database
+*.sql.backup
+*.db
+*.sqlite
+
+# Screenshots
+screenshots/
+
+# Backup files
+*.backup
+*.bak
+backup/
+
+# Development and testing files
+test.php
+debug.php
+phpinfo.php
+test/
+tests/
+debug/
+
+# User data
+files/
+media/
+attachments/
+
+# Configuration backups
+*.conf.backup
+*.ini.backup
+
+# Node modules (if you use any JS build tools)
+node_modules/
+
+# Package files
+*.zip
+*.tar.gz
+*.rar
+
+# Runtime data
+pids/
+*.pid
+*.pid.lock
+*.sock
+*.seed

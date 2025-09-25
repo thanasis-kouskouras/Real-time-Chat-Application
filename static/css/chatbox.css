@@ -1,0 +1,371 @@
+.flex-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column-item {
+  flex: 1 0 61%;
+  margin: 2px;
+  background-color: lightgreen;
+}
+
+.column-item:nth-of-type(4),
+.column-item:nth-of-type(5) {
+  flex-basis: 40%;
+}
+
+.imgChat {
+  margin-bottom: 16px;
+  height: 100px;
+  width: 100px;
+}
+
+audio {
+  margin-bottom: 16px;
+}
+
+video {
+  margin-bottom: 16px;
+}
+
+.pFrom {
+  background-color: #6c757d;
+  color: white;
+  text-align: right;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.pTo {
+  background-color: lightgray;
+  text-align: left;
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.pMessage {
+  word-wrap: break-word;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.divTo2 {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: start;
+  margin-left: 30px;
+}
+
+.divFrom2 {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.divTo {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.divFrom {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.divToText {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.divFromText {
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: orangered;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotBlock {
+  height: 5px;
+  width: 5px;
+  background-color: orangered;
+  border-radius: 50%;
+  display: block;
+}
+
+#buttonDelete {
+  height: 10px;
+  width: 25px;
+  padding-bottom: 28px;
+  border-radius: 10px;
+  border-color: black;
+}
+
+#buttonCloseChatBox {
+  height: 30px;
+  width: 30px;
+  padding-bottom: 28px;
+  border-radius: 10px;
+  border-color: black;
+}
+
+#buttonDeleteSound {
+  height: 10px;
+  width: 25px;
+  padding-bottom: 28px;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 22px;
+}
+
+#file-chosen {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50ch;
+}
+
+.small_span {
+  font-size: smaller;
+  color: cornflowerblue;
+  align-items: flex-end;
+}
+
+.small_span_dark {
+  font-size: smaller;
+  color: lightsteelblue;
+  align-items: flex-end;
+}
+
+.small_span_white {
+  font-size: smaller;
+  color: cornflowerblue;
+  align-items: flex-end;
+}
+
+video {
+  width: 200px;
+  height: auto;
+}
+
+.buttonLabel {
+  background-color: #6c757d;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  width: 41.6px;
+  height: 37.6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.buttonLabel:hover {
+  background-color: #5c636a; /* Bootstrap btn-secondary hover */
+}
+
+.buttonLabel:active {
+  background-color: #565e64; /* Bootstrap btn-secondary active */
+}
+
+#send {
+  flex: 1 0 60%;
+  background-color: cornflowerblue;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-left: 12px;
+  margin-right: 2px;
+}
+
+#send:hover {
+  background-color: #4169e1;
+}
+
+#send:active {
+  background-color: #191970;
+}
+
+.mainChatDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainChatDivRow {
+  display: flex;
+  margin-top: 2px;
+}
+
+.mainChatDivRowCenter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 2px;
+  justify-content: center;
+  align-items: center;
+}
+.modal-header {
+  background-color: lightslategray;
+  color: white;
+}
+
+.modal-body {
+  height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#profileImage {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+#profileImgInMessage {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+
+#fileChooseDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+
+#chatMessage {
+  margin-left: 10px;
+  margin-bottom: 12px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+#CloseChatForm {
+  margin-left: 5px;
+  margin-top: 14px;
+  margin-bottom: 12px;
+}
+
+#mainMargin {
+  margin-bottom: 0;
+}
+
+#modalDialog {
+  min-width: 570px;
+}
+
+#messageEditArea {
+  background-color: lightsteelblue;
+}
+
+#flexGrow2 {
+  flex-grow: 2;
+  text-align: left;
+  padding-left: 5px;
+}
+
+#flexGrow1 {
+  flex-grow: 1;
+}
+#item {
+  margin-right: 2px;
+  flex-shrink: 3;
+}
+#audioCallButton {
+  margin-right: 2px;
+  margin-left: 12px;
+  flex-shrink: 3;
+}
+#videoCallButton {
+  margin-right: 2px;
+  flex-shrink: 3;
+}
+.fontawesomesvg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.document-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin: 5px 0;
+  transition: background-color 0.2s;
+}
+
+.document-link:hover {
+  background-color: #e0e0e0;
+}
+
+.doc-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.doc-name {
+  font-size: 14px;
+  word-break: break-word;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#chatMessage.highlight-drop-area {
+  border: 2px dashed #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+#chatMessage::placeholder {
+  content: "Type a message or drop files here...";
+}
