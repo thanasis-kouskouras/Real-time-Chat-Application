@@ -58,51 +58,51 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 ## Demo Screenshots
 
 ### Login Page
-![Login](screenshots/login.png)
+![Login](screenshots/login.jpg)
 *Secure user authentication with "Remember Me" functionality and clean, modern interface*
 
 ### User Registration
-![Signup](screenshots/signup.png)
+![Signup](screenshots/signup.jpg)
 *Easy registration process with email verification and password confirmation*
 
 ### Home Dashboard
-![Home](screenshots/home.png)
+![Home](screenshots/home.jpg)
 *Personalized home page displaying user profile and quick navigation*
 
 ### Profile Management
-![Profile](screenshots/profile.png)
+![Profile](screenshots/profile.jpg)
 *Comprehensive profile customization with profile picture upload and personal information*
 
 ### Friends List
-![Friends](screenshots/friends.png)
+![Friends](screenshots/friends.jpg)
 *Manage your connections with real-time online status indicators and friend management options*
 
 ### Messages Overview
-![Messages](screenshots/messages.png)
+![Messages](screenshots/messages.jpg)
 *View all unread messages with sender information and message previews*
 
 ### Notifications Center
-![Notifications](screenshots/notifications.png)
+![Notifications](screenshots/notifications.jpg)
 *Handle friend requests with Accept/Decline options and view all pending notifications*
 
 ### About Us
-![About](screenshots/about.png)
+![About](screenshots/about.jpg)
 *Learn about the EasyTalk project and its development as a university initiative*
 
 ### Contact Support
-![Contact](screenshots/contact.png)
+![Contact](screenshots/contact.jpg)
 *Easy-to-use contact form for user support and feedback submission*
 
 ### Settings & Privacy
-![Settings](screenshots/settings.png)
+![Settings](screenshots/settings.jpg)
 *Comprehensive privacy controls including account visibility and email notification preferences*
 
 ### User Search
-![Search](screenshots/search.png)
+![Search](screenshots/search.jpg)
 *Advanced user search functionality with multiple result management options (Chat, Friend Request, Accept/Decline)*
 
 ### Chat Interface
-![Chatbox](screenshots/chatbox.png)
+![Chatbox](screenshots/chatbox.jpg)
 *Real-time messaging with multimedia support, audio messages, message deletion, and intuitive chat controls*
 
 
