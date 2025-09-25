@@ -1,5 +1,17 @@
-# EasyTalk - Real-time Chat Application
-EasyTalk is a modern, feature-rich web-based chat application built with PHP, WebSockets, and MySQL. It offers real-time messaging, file sharing, voice and video recording, image capturing, and comprehensive user management.
+# EasyTalk - Real-time Chat Application (Diploma Thesis)
+
+</table>
+<table>
+<tr><td width="200">
+<img src="screenshots/logo.png" alt="EasyTalk Logo" width="200" height="200">
+</td><td>
+
+# EasyTalk
+
+#### EasyTalk is a modern, feature-rich web-based chat application built with PHP, WebSockets, and MySQL. It offers real-time messaging, file sharing, voice and video recording, image capturing, and comprehensive user management.
+
+</td></tr>
+</table>
 
 ## Description
 
