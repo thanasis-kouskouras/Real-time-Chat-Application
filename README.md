@@ -54,6 +54,60 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 - **CSRF Protection**: Cross-site request forgery protection
 - **XSS Protection**: Output escaping and content security policies
 
+
+## Demo Screenshots
+
+### Login Page
+![Login](screenshots/login.png)
+*Secure user authentication with "Remember Me" functionality and clean, modern interface*
+
+### User Registration
+![Signup](screenshots/signup.png)
+*Easy registration process with email verification and password confirmation*
+
+### Home Dashboard
+![Home](screenshots/home.png)
+*Personalized home page displaying user profile and quick navigation*
+
+### Profile Management
+![Profile](screenshots/profile.png)
+*Comprehensive profile customization with profile picture upload and personal information*
+
+### Friends List
+![Friends](screenshots/friends.png)
+*Manage your connections with real-time online status indicators and friend management options*
+
+### Messages Overview
+![Messages](screenshots/messages.png)
+*View all unread messages with sender information and message previews*
+
+### Notifications Center
+![Notifications](screenshots/notifications.png)
+*Handle friend requests with Accept/Decline options and view all pending notifications*
+
+### About Us
+![About](screenshots/about.png)
+*Learn about the EasyTalk project and its development as a university initiative*
+
+### Contact Support
+![Contact](screenshots/contact.png)
+*Easy-to-use contact form for user support and feedback submission*
+
+### Settings & Privacy
+![Settings](screenshots/settings.png)
+*Comprehensive privacy controls including account visibility and email notification preferences*
+
+### User Search
+![Search](screenshots/search.png)
+*Advanced user search functionality with multiple result management options (Chat, Friend Request, Accept/Decline)*
+
+### Chat Interface
+![Chatbox](screenshots/chatbox.png)
+*Real-time messaging with multimedia support, audio messages, message deletion, and intuitive chat controls*
+
+
+---
+
 ## Technology Stack
 
 - **Backend**: PHP 8.2.0
