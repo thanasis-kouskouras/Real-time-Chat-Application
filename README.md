@@ -187,7 +187,8 @@ The system is built using modern web technologies with PHP backend, MySQL databa
      4. JWT Security (change these in production): <br>
         ```php
         const JWT_SECRET = "your-super-secret-key-here"; 
-        const JWT_ISSUER = "easyTalkAdmin";
+        const JWT_ISSUER = "your_issuer_here";
+        const JWT_AUD = "your_audience_here";
 
     - Email Configuration: <br>
     
