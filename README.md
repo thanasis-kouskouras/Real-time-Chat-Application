@@ -149,11 +149,11 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 3. **Database Setup**
    - Create a MySQL database
      ```bash
-     mysql -u root -p -e "CREATE DATABASE easytalk;"
+     mysql -u root -p -e "CREATE DATABASE your_database;"
    
    - Import the database schema
      ```bash
-     mysql -u username -p easytalk < easytalk.sql
+     mysql -u username -p your_database < database.sql
 
 4. **Configuration**
    
@@ -164,9 +164,9 @@ The system is built using modern web technologies with PHP backend, MySQL databa
      ```php
      <?php
      $servername = "localhost";
-     $username = "easytalk_user";        // Your MySQL username
+     $username = "your_server_username"; // Your MySQL username
      $password = "your_secure_password"; // Your MySQL password
-     $dbname = "easytalk";               // Your database name
+     $dbname = "your_database_name";     // Your database name
 
    - Application Settings: <br>
    
@@ -174,7 +174,7 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 
      1. Base URL Configuration (adjust to your setup): <br>
         ```php
-        $urlServer = "http://localhost/easytalk/"; //Change if deployed elsewhere
+        $urlServer = "http://localhost/Real-time-Chat-Application/"; //Change if deployed elsewhere
 
      2. Timezone (change to your location): <br>
         ```php
