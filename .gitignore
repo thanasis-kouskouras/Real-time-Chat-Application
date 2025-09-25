@@ -4,10 +4,10 @@ temp/
 temporary/
 
 # Upload directory
-#uploads/
+uploads/
 
 # Vendor dependencies
-#vendor/
+vendor/
 composer.phar
 
 # Log files
