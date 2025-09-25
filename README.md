@@ -73,7 +73,7 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 ![Profile](screenshots/profile.jpg)
 *Comprehensive profile customization with profile picture upload and personal information*
 
-### Friends List
+### Friend List
 ![Friends](screenshots/friends.jpg)
 *Manage your connections with real-time online status indicators and friend management options*
 
@@ -87,7 +87,7 @@ The system is built using modern web technologies with PHP backend, MySQL databa
 
 ### About Us
 ![About](screenshots/about.jpg)
-*Learn about the EasyTalk project and its development as a university initiative*
+*Learn about the EasyTalk project*
 
 ### Contact Support
 ![Contact](screenshots/contact.jpg)
