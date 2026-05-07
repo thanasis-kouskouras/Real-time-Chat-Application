@@ -1,0 +1,43 @@
+# Temporary and runtime files
+*.log
+tmp/**
+!tmp/.htaccess
+/screenshots/
+
+# User uploads — ignore all content, keep folder structure via .gitkeep
+uploads/chat/**
+!uploads/chat/.gitkeep
+uploads/groups/**
+!uploads/groups/.gitkeep
+uploads/profiles/user_profiles/**
+!uploads/profiles/.gitkeep
+!uploads/profiles/user_profiles/.gitkeep
+
+# Database dumps — keep main schema file, ignore everything else
+*.sql
+!app_database.sql
+
+# OS system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# Environment and config — NEVER commit .env (contains passwords/secrets)
+.env
+.env.local
+.env.*.local
+
+# Dependencies (if you use Composer)
+/vendor/
+auth.json
+
+# Node modules (if you use npm)
+node_modules/

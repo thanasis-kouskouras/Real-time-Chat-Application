@@ -1,0 +1,299 @@
+/* ADMIN USER MANAGEMENT PAGE STYLES */
+
+/* User Management Card Container */
+#card-user-management-outer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+#card-user-management-outer:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* User Cards Container (Scrollable List) */
+#card-users {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* Individual User Card (Data List Item) — base styles in buttons.css */
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-card:hover {
+  transform: translateY(-1px);
+}
+
+/* User Card Layout */
+.user-card #left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  min-width: 0;
+}
+
+.user-card #right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Profile Images in User Cards */
+#profileImgInUsersActive,
+#profileImgInUsersInactive {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+#profileImgInUsersActive {
+  border: 3px solid #28a745;
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.4);
+}
+
+#profileImgInUsersInactive {
+  border: 3px solid #6c757d;
+  opacity: 0.8;
+}
+
+/* User Info Section */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  flex: 1;
+}
+
+.user-info strong {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  word-break: break-word;
+  line-height: 1.3;
+}
+
+.user-info small {
+  font-size: 13px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.user-info .text-muted {
+  color: #6c757d !important;
+}
+
+/* Banned Badge */
+.user-info .badge.bg-danger {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: salmon !important;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+/* Search Form Styles */
+#card-user-management-outer form.d-flex {
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#card-user-management-outer .form-control {
+  flex: 1;
+  min-width: 0;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 10px 15px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+#card-user-management-outer .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+
+/* User Count Display */
+#card-user-management-outer .alert-white {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+/* Current User Label */
+.user-card #right .text-muted {
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* Scrollbar Styling for User List */
+#card-users::-webkit-scrollbar {
+  width: 8px;
+}
+
+#card-users::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#card-users::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#card-users::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Status Filter Dropdown */
+.filter-select-sm {
+  max-width: 200px;
+}
+
+/* Mobile Responsive Styles (< 768px) */
+@media (max-width: 767px) {
+  /* Card Container */
+  #card-user-management-outer {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  /* User Cards Container */
+  #card-users {
+    max-height: calc(100vh - 350px);
+    padding: 0;
+  }
+
+  /* Individual User Card (Wrap Layout) */
+  .user-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .user-card #left {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .user-card #right {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  /* Profile Images (Smaller on Mobile) */
+  #profileImgInUsersActive,
+  #profileImgInUsersInactive {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* User Info */
+  .user-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .user-info strong {
+    font-size: 15px;
+  }
+
+  .user-info small {
+    font-size: 12px;
+  }
+
+  /* Search Form (Full Width) */
+  #card-user-management-outer form.d-flex {
+    gap: 8px;
+  }
+
+  #card-user-management-outer .form-control {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  #card-user-management-outer .btn-outline-primary {
+    min-width: 80px;
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  /* Typography Adjustments */
+  #card-user-management-outer h2 {
+    font-size: 1.5rem;
+  }
+
+  #card-user-management-outer h6 {
+    font-size: 0.9rem;
+  }
+
+  /* Alert Messages */
+  #card-user-management-outer .alert {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  /* Current User Label */
+  .user-card #right .text-muted {
+    text-align: right;
+    font-size: 13px;
+    font-style: italic;
+  }
+}
+
+/* Extra Small Mobile (360px and below) */
+@media (max-width: 360px) {
+  .user-card {
+    padding: 10px !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  #profileImgInUsersActive,
+  #profileImgInUsersInactive {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .user-info strong {
+    font-size: 13px !important;
+  }
+
+  .user-info small {
+    font-size: 11px !important;
+  }
+}
+
+/* Desktop Styles (> 1024px) */
+@media (min-width: 1025px) {
+  #card-users {
+    max-height: 550px;
+  }
+}

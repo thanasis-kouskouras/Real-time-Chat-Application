@@ -1,0 +1,12 @@
+# Deny all direct web access to includes/.
+
+# PHP files here are loaded via require_once from top-level entry points. They are not meant to be invoked directly over HTTP.
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+Order Allow,Deny
+Deny from all
+</IfModule>

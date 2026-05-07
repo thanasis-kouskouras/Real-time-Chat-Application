@@ -1,0 +1,231 @@
+/* MOBILE RESPONSIVE STYLES
+
+Global mobile styles for all pages. */
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  /* Ensure proper centering and padding on very small screens */
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  main {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .card {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 10px !important;
+  }
+
+  .card-body {
+    padding: 10px !important;
+  }
+
+  /* Ensure columns take full width and are centered */
+  .col-12,
+  .col-sm-10,
+  .col-md-10,
+  .col-md-8,
+  .col-lg-8,
+  .col-lg-6,
+  .col-xl-6 {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Fix Bootstrap row negative margins */
+  .justify-content-center {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Small Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  /* Adjust container top spacing */
+  .container.mt-5 {
+    margin-top: 8rem !important;
+  }
+
+  /* Card Responsiveness (ensure cards are centered) */
+  #card-searchUp,
+  #card-friend-search-outer {
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+  }
+
+  /* Ensure row and columns center their content for card pages */
+  .row.justify-content-center {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .row.justify-content-center > [class*="col-"] {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    padding: 0 10px !important;
+  }
+
+  /* Main should allow scrolling */
+  main.d-flex {
+    min-height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    align-items: flex-start !important;
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+  }
+
+  main.responsive-height {
+    min-height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+    align-items: flex-start !important;
+  }
+
+  #card-profile-outer,
+  #card-contact {
+    height: auto;
+    max-height: none !important;
+    overflow-y: visible !important;
+    overflow-x: hidden;
+  }
+
+  #card-search,
+  #card-friend,
+  #card-friend-search {
+    height: auto !important;
+    max-height: 50vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+  }
+
+  .card {
+    margin: 10px auto !important;
+    padding: 15px;
+    display: block !important;
+    max-width: 340px !important;
+    width: 100% !important;
+  }
+
+  /* Override inline styles on profile page card */
+  .profile-page .card {
+    max-width: 340px !important;
+    width: 100% !important;
+  }
+
+  /* Ensure vw-100 main is properly centered */
+  main.vw-100 {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force container to center content */
+  main .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Force row to center and not overflow */
+  main .container > .row {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+  }
+
+  /* Force column to take full width of row */
+  main .container > .row > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    padding: 0 !important;
+  }
+
+  /* Image Responsiveness */
+  #homepage-center-profile-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #profileImage,
+  #profileImgInFriendsActive,
+  #profileImgInFriendsInactive {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Logo Responsiveness */
+  .logo-login,
+  .logo-signup {
+    height: 120px;
+    width: 120px;
+  }
+
+  #logo {
+    height: 28px;
+  }
+
+  /* Typography Mobile Adjustments */
+  body {
+    font-size: 14px;
+    overflow-y: auto !important;
+    max-height: none !important;
+    min-height: 100vh;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  #blackBigUsername {
+    font-size: large;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Form elements responsive */
+  .form-control {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,45 @@
+# Root .htaccess — Defense in depth for the EasyTalk webroot.
+# The XAMPP / Apache defaults only block .ht* files. This file extends that to every dotfile/dotfolder and to sensitive non-PHP extensions that would otherwise be served as plain text (config, logs, DB dumps, etc.).
+
+# 1. Block path-based access:
+#    - Dotfiles and dotfolders (.env, .env.example, .git/, .gitignore etc.)
+#    - vendor/ (composer dependencies, covers the case where vendor/ is created by `composer install` after clone, so no vendor/.htaccess exists yet)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule "(^|/)\." - [F]
+    RewriteRule "(^|/)vendor(/|$)" - [F]
+</IfModule>
+
+# 2. Block sensitive file extensions anywhere under the webroot
+<FilesMatch "\.(env|log|sql|lock|md|json|yml|yaml|ini|sh|bak|swp|dist|twig|tpl|cache|pem|key)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 3. Disable directory listings anywhere Apache would otherwise auto-index
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# 4. Security HTTP headers. Protect the app's own pages from sniffing, clickjacking, referrer leaks, unused browser APIs, and protocol downgrade.
+<IfModule mod_headers.c>
+    # Block MIME-type sniffing. The browser must honour the server's Content-Type.
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Disallow embedding any page of this site inside an <iframe> on another origin (clickjacking).
+    Header always set X-Frame-Options "DENY"
+
+    # When navigating to external sites, strip the full URL from the Referer header. Only the origin is sent cross-origin.
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Disable browser APIs the app does not use. Camera/microphone are kept enabled for self (used by static/js/modules/camera-modal.js for in-browser recording).
+    Header always set Permissions-Policy "camera=(self), microphone=(self), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=(), autoplay=(self), fullscreen=(self)"
+
+    # Force HTTPS for future requests (one year, including subdomains). Only emitted on HTTPS responses, so it is a no-op on local HTTP development.
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>

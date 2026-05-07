@@ -1,0 +1,55 @@
+/* Override Bootstrap px-3 right padding on scrolling containers so Chrome/Edge don't double-up the gap (padding + reserved scrollbar). */
+#card-search.px-3,
+#groupChatsList.px-3 {
+  padding-right: 0 !important;
+}
+
+/* Firefox-only: restore right padding so overlay scrollbars (enabled by default in Firefox on Windows 11). */
+@-moz-document url-prefix() {
+  #card-search.px-3,
+  #groupChatsList.px-3 {
+    padding-right: 1rem !important;
+  }
+}
+
+.message-item {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  min-height: 86px;
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.message-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.msg-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.msg-content-wrap {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.msg-text-truncate {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.msg-right {
+  flex-shrink: 0;
+  margin-left: 12px;
+}

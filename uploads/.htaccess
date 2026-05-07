@@ -1,0 +1,28 @@
+# Deny direct access to uploads folder
+
+# Files should only be accessed through download.php which has authentication
+
+# Apache 2.4+ (modern syntax)
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Apache 2.2 (legacy syntax for compatibility)
+
+<IfModule !mod_authz_core.c>
+Order Allow,Deny
+Deny from all
+</IfModule>
+
+# Defense-in-depth. This block is redundant under normal operation. Kept as a safety net. Explicitly block PHP execution on anything that ends in a PHP-executable extension.
+
+<FilesMatch "\.ph(p[3457]?|t|tml)$">
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order Allow,Deny
+Deny from all
+</IfModule>
+</FilesMatch>

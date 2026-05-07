@@ -1,0 +1,667 @@
+/* GROUPS PAGE STYLING */
+
+.groups-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px auto !important;
+}
+
+.groups-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.groups-search-input {
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+/* Group Row Styling */
+.group-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.group-row:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.group-row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.group-info-wrapper {
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.group-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.group-members-count {
+  font-size: 13px;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+.group-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.group-actions form {
+  margin: 0;
+}
+
+/* Theme colors */
+.theme-secondary-text {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.theme-secondary-text:hover {
+  color: #495057;
+  text-decoration: underline;
+}
+
+/* Groups list scrolling (default for desktop) */
+#groupsList {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding-bottom: 20px;
+}
+
+/* Groups list scrolling for small heights */
+@media (max-height: 760px) {
+  #groupsList {
+    max-height: 400px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .groups-page-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: auto;
+  }
+
+  /* Add scrolling to groups list on mobile */
+  #groupsList {
+    max-height: 39vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+
+  .groups-card {
+    margin-bottom: 30px !important;
+  }
+  .container.mt-5 {
+    margin-top: 0rem !important;
+  }
+  .groups-page-wrapper .groups-card.card {
+    max-width: 100% !important;
+    padding: 15px !important;
+    margin: 0 auto !important;
+  }
+
+  main .card {
+    margin: 0 auto !important;
+  }
+
+  .group-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .group-row img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .group-info-wrapper {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .group-title {
+    font-size: 14px !important;
+  }
+
+  .group-members-count {
+    font-size: 12px !important;
+  }
+
+  .group-actions {
+    flex-basis: 100%;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Override mobile.css card margin for group pages */
+  .groups-page-wrapper .card {
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .group-row {
+    padding: 8px !important;
+    gap: 6px;
+    margin-bottom: 6px !important;
+  }
+
+  .group-row img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .group-title {
+    font-size: 13px !important;
+  }
+
+  .group-members-count {
+    font-size: 11px !important;
+  }
+
+  .group-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Default group image */
+img[src*="groupdefault.png"] {
+  background-color: #e9ecef;
+  padding: 5px;
+}
+
+/* Empty state styling */
+#groupsList:empty::after {
+  content: "No groups to display";
+  display: block;
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Group Edit & Create Pages (responsiveness) */
+
+/* Ensure proper scrolling on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  main {
+    padding-top: 70px !important;
+    padding-bottom: 30px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  main .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  main .card {
+    margin-bottom: 20px;
+  }
+
+  /* Members box adjustments for small screens */
+  .members-box {
+    max-height: 250px !important;
+  }
+
+  /* Edit section spacing */
+  .edit-section {
+    margin-bottom: 20px !important;
+  }
+
+  /* Form button adjustments */
+  .d-flex.gap-2 {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .d-flex.gap-2 input[type="text"] {
+    width: 100% !important;
+  }
+
+  .d-flex.gap-2 button {
+    width: 100% !important;
+  }
+
+  /* Back button and title layout */
+  .card .d-flex.justify-content-between.align-items-center {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card .d-flex.justify-content-between.align-items-center h2 {
+    flex-basis: 100%;
+    order: 2;
+    margin-top: 5px !important;
+  }
+
+  .card .d-flex.justify-content-between.align-items-center button {
+    order: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  main {
+    padding-top: 70px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main .card {
+    padding: 15px !important;
+  }
+
+  .members-box {
+    max-height: 200px !important;
+  }
+
+  /* Smaller member images on very small screens */
+  .member-img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .member-row {
+    padding: 8px !important;
+    font-size: 14px;
+  }
+
+  /* Adjust form controls */
+  .form-control {
+    font-size: 14px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
+
+/* Fix viewport width issues and add top margin for navbar */
+@media (max-width: 768px) {
+  .vw-100 {
+    width: 100% !important;
+    max-width: 100vw;
+    margin-top: 50px;
+  }
+}
+
+/* Ensure proper spacing for fixed navbar */
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  padding-top: 0;
+}
+
+main {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: block;
+}
+.responsive-height {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Group Edit & Create (Shared Styles) */
+
+.edit-section {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.edit-section:last-of-type {
+  border-bottom: none;
+}
+
+.members-box {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.member-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  transition: all 0.2s;
+}
+
+.member-row:hover {
+  background-color: #f8f9fa;
+}
+
+.member-row.add-member-row {
+  cursor: pointer;
+}
+
+.member-row.add-member-row:hover {
+  background-color: #e7f3ff;
+  border-color: #0d6efd;
+}
+
+.member-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Username truncation for long names on small screens */
+.member-row .member-username {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .member-row .member-username {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 400px) {
+  .member-row .member-username {
+    max-width: 80px;
+  }
+}
+
+/* Loading state for group image */
+#currentGroupImageContainer {
+  transition: opacity 0.3s ease;
+}
+
+#currentGroupImage {
+  transition: opacity 0.3s ease;
+}
+
+/* Image preview for group create */
+#imagePreviewContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+#imagePreviewContainer img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+}
+
+/* Member validation status styles (use !important to override default and hover states) */
+.member-row.validation-valid,
+.member-row.add-member-row.validation-valid {
+  border-color: #198754 !important;
+  background-color: #d1e7dd !important;
+}
+
+.member-row.validation-valid:hover,
+.member-row.add-member-row.validation-valid:hover {
+  background-color: #c3e0d4 !important;
+  border-color: #198754 !important;
+}
+
+.member-row.validation-invalid,
+.member-row.add-member-row.validation-invalid {
+  border-color: #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+.member-row.validation-invalid:hover,
+.member-row.add-member-row.validation-invalid:hover {
+  background-color: #f5c6cb !important;
+  border-color: #dc3545 !important;
+}
+
+.member-row.validation-pending,
+.member-row.add-member-row.validation-pending {
+  border-color: #ffc107 !important;
+  background-color: #fff3cd !important;
+}
+
+.member-row.validation-pending:hover,
+.member-row.add-member-row.validation-pending:hover {
+  background-color: #fff3cd !important;
+  border-color: #ffc107 !important;
+}
+
+.member-row .validation-status {
+  font-size: 12px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.member-row .validation-status.valid {
+  color: #198754;
+}
+
+.member-row .validation-status.invalid {
+  color: #dc3545;
+}
+
+.member-row .validation-status.pending {
+  color: #856404;
+}
+
+.member-row .validation-icon {
+  font-size: 14px;
+}
+
+/* Validation summary banner */
+.validation-summary {
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.validation-summary.show {
+  display: block;
+}
+
+.validation-summary.success {
+  background-color: #d1e7dd;
+  border: 1px solid #badbcc;
+  color: #0f5132;
+}
+
+.validation-summary.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+}
+
+.validation-summary.warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffecb5;
+  color: #664d03;
+}
+
+/* Spinner for validation loading */
+.validation-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #856404;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disabled button style for group creation */
+.btn-disabled,
+.btn.btn-disabled,
+.btn-success.btn-disabled {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  opacity: 0.65 !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+/* Admin Leave Modal Styles */
+#adminLeaveModal .modal-title {
+  text-align: center;
+  width: 100%;
+}
+
+#adminLeaveModal .admin-leave-group-label {
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+#adminLeaveModal .admin-leave-group-name {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Selected member in admin leave modal */
+#adminLeaveModal .member-row.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
+}
+
+/* GROUP PAGE LAYOUT */
+
+.group-page-main {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.container-full {
+  max-width: 100%;
+}
+
+.group-page-card {
+  margin: 20px auto !important;
+}
+
+/* GROUP IMAGE */
+.group-round-img-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.group-round-img-container.clickable {
+  cursor: pointer;
+}
+
+.group-round-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #dee2e6;
+}
+
+/* GROUP MEMBERS LIST */
+.members-box-limited {
+  max-height: 300px;
+}
+
+.successor-radio-btn {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}

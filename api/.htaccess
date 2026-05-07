@@ -1,0 +1,6 @@
+# Deny direct web access to api/\*-endpoints/ subfolders.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule "(^|/)[^/]+-endpoints(/|$)" - [F]
+</IfModule>

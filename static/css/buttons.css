@@ -1,0 +1,240 @@
+/* GLOBAL BUTTON SYSTEM
+ 
+Standardized button classes for consistent styling across the application. */
+
+/* Base button class (all custom buttons should include this) */
+.app-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+/* Fixed width buttons for consistent sizing */
+.app-btn-fixed {
+  width: 100px;
+  min-height: 45px;
+}
+
+/* Primary action buttons (main actions like "Chat", "Save") */
+.app-btn-primary {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.app-btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Secondary action buttons (less important actions) */
+.app-btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.app-btn-secondary:hover {
+  background-color: #5c636a;
+  border-color: #565e64;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Success buttons (positive actions like "Accept", "Create") */
+.app-btn-success {
+  background-color: #198754c9;
+  color: white;
+  border-color: #198754c9;
+}
+
+.app-btn-success:hover {
+  background-color: #157347;
+  border-color: #146c43;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(25, 135, 84, 0.3);
+}
+
+/* Danger buttons (destructive actions like "Delete", "Remove") */
+.app-btn-danger {
+  background-color: salmon;
+  color: white;
+  border-color: salmon;
+}
+
+.app-btn-danger:hover {
+  background-color: rgb(226, 89, 74);
+  border-color: rgb(226, 89, 74);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Outline variants */
+.app-btn-outline-primary {
+  background-color: transparent;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.app-btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.app-btn-outline-secondary {
+  background-color: transparent;
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.app-btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+.app-btn-outline-success {
+  background-color: transparent;
+  color: #198754;
+  border-color: #198754;
+}
+
+.app-btn-outline-success:hover {
+  background-color: #198754;
+  color: white;
+}
+
+.app-btn-outline-danger {
+  background-color: transparent;
+  color: salmon;
+  border-color: salmon;
+}
+
+.app-btn-outline-danger:hover {
+  background-color: salmon;
+  color: white;
+}
+
+/* Disabled state */
+.app-btn:disabled,
+.app-btn.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Icon spacing in buttons */
+.app-btn i {
+  margin-right: 4px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .app-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .app-btn-fixed {
+    width: 80px;
+    min-height: 40px;
+  }
+
+  .app-btn i {
+    margin-right: 2px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .app-btn-fixed {
+    width: 75px;
+    min-height: 38px;
+  }
+}
+
+/* User Card for friend/user list rows */
+.user-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.user-card:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .user-card {
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-card {
+    padding: 8px;
+    margin-bottom: 6px;
+  }
+}
+
+/* BUTTON WIDTH UTILITIES */
+
+.btn-min-w-100 {
+  min-width: 100px;
+}
+.btn-min-w-150 {
+  min-width: 150px;
+}
+
+/* Utility: UI disabled state for non-form buttons */
+.ui-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Utility: Deactivated input field */
+.input-deactivated {
+  background-color: #f0f0f0;
+}
+
+/* FRIEND CARD LAYOUT */
+
+.friend-card-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.friend-img-margin {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.friend-name-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  display: inline-block;
+  cursor: help;
+}

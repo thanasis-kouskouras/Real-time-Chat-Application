@@ -1,0 +1,12 @@
+# Deny all direct web access to the tmp/ directory.
+
+# Runtime files here contain user PII and are read/written only by PHP through the filesystem, never over HTTP.
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+<IfModule !mod_authz_core.c>
+Order Allow,Deny
+Deny from all
+</IfModule>

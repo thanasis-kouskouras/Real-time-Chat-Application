@@ -1,0 +1,1199 @@
+/* GROUP CHAT STYLES 
+
+Extends chatbox.css with group-specific styles. */
+
+/* GROUP LIST ITEMS (messages.php) */
+
+/* Group Sections */
+#groupChatsSection,
+#groupInvitationsSection {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #e9ecef;
+}
+
+#groupChatsSection h5,
+#groupInvitationsSection h5 {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+#groupChatsSection h5 i,
+#groupInvitationsSection h5 i {
+  margin-right: 8px;
+  color: #6c757d;
+}
+
+/* Unread Badge */
+.badge.bg-danger {
+  font-size: 11px;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* CREATE GROUP BUTTON */
+
+#createGroupBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+#createGroupBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(40, 167, 69, 0.3);
+}
+
+#createGroupBtn i {
+  font-size: 14px;
+}
+
+/* CREATE GROUP MODAL */
+
+#createGroupModal .modal-dialog {
+  max-width: 500px;
+}
+
+#createGroupModal .modal-header {
+  background-color: #28a745;
+  color: white;
+}
+
+#createGroupModal .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+#createGroupModal #friendsList {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+#createGroupModal .form-check {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+#createGroupModal .form-check:last-child {
+  border-bottom: none;
+}
+
+#createGroupModal .form-check-label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
+
+#createGroupModal .form-check-input:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+#createGroupModal #selectedCount {
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* GROUP INFO MODAL */
+
+#groupInfoModal .modal-dialog {
+  max-width: 600px;
+}
+
+#groupInfoModal .modal-header {
+  background-color: #6c757d;
+  color: white;
+}
+
+#groupInfoModal .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.group-info-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.group-info-section:last-child {
+  border-bottom: none;
+}
+
+.group-info-section h6 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.group-info-section p {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Members List */
+.members-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.member-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.member-item:hover {
+  background-color: #f8f9fa;
+}
+
+.member-item:last-child {
+  border-bottom: none;
+}
+
+.member-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 8px;
+}
+
+.member-status {
+  font-size: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+.member-name {
+  font-weight: 500;
+  color: #333;
+  margin-right: 8px;
+}
+
+.member-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.member-actions .btn {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Admin Badge */
+.badge.bg-primary {
+  background-color: #007bff !important;
+  font-size: 10px;
+  padding: 3px 6px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Group Info Actions */
+#groupInfoActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+#groupInfoActions .btn {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* INVITE MEMBERS MODAL */
+
+#inviteMembersModal .modal-dialog {
+  max-width: 500px;
+}
+
+#inviteMembersModal .modal-header {
+  background-color: #0d6efd;
+  color: white;
+}
+
+#inviteMembersModal .modal-header .btn-close {
+  filter: brightness(0) invert(1);
+}
+
+.friends-list {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.friends-list .form-check {
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.friends-list .form-check:last-child {
+  border-bottom: none;
+}
+
+.friends-list .form-check-label {
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+}
+
+/* EDIT GROUP MODAL */
+
+#editGroupModal .modal-dialog {
+  max-width: 500px;
+}
+
+#editGroupModal .modal-header {
+  background-color: #ffc107;
+  color: #000;
+}
+
+#editGroupModal .modal-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* GROUP HEADER (chatbox.php) */
+
+/* Group Info Button */
+#buttonGroupInfo {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#buttonGroupInfo:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#buttonGroupInfo:active {
+  transform: translateY(0);
+}
+
+#buttonGroupInfo i {
+  font-size: 16px;
+}
+
+/* Member Count Indicator */
+.member-count-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.member-count-indicator i {
+  font-size: 14px;
+}
+
+/* SENDER NAME LABELS (Group Messages) */
+
+/* Group Message Container (Viber-style layout) */
+.group-message-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+/* Header with profile pic and sender name */
+.group-message-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  margin-left: 5px;
+}
+
+/* Profile image in group messages */
+.group-profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Sender Name Label */
+.sender-name-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #495057;
+  display: inline-block;
+}
+
+/* Adjust message bubble position in group messages */
+.group-message-container .divTo,
+.group-message-container .divToText {
+  margin-left: 5px;
+}
+
+/* Remove the profile image from inside message bubbles in group chats */
+.group-message-container #profileImgInMessage {
+  display: none;
+}
+
+/* Align date/timestamp with message bubble in group chats */
+.group-message-container .divTo2 {
+  margin-left: 5px;
+}
+
+/* Add spacing below date/timestamp to separate messages */
+.divTo2,
+.divFrom2 {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.sender-name-label.from-me {
+  text-align: right;
+  margin-right: 5px;
+  margin-left: 0;
+  color: #6c757d;
+}
+
+.group-message-container.from-me {
+  text-align: right;
+}
+
+.group-message-container.from-other {
+  text-align: left;
+}
+
+/* ONLINE STATUS INDICATORS */
+
+.online-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.online-status.online {
+  background-color: #28a745;
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.5);
+}
+
+.online-status.offline {
+  background-color: #dc3545;
+}
+
+/* UNREAD COUNT BADGES */
+
+.unread-badge {
+  display: inline-block;
+  background-color: #dc3545;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 7px;
+  border-radius: 12px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ALERT MESSAGES */
+
+.alert {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+/* SCROLLBAR STYLING */
+
+.members-list::-webkit-scrollbar,
+.friends-list::-webkit-scrollbar,
+#friendsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.members-list::-webkit-scrollbar-track,
+.friends-list::-webkit-scrollbar-track,
+#friendsList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.members-list::-webkit-scrollbar-thumb,
+.friends-list::-webkit-scrollbar-thumb,
+#friendsList::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.members-list::-webkit-scrollbar-thumb:hover,
+.friends-list::-webkit-scrollbar-thumb:hover,
+#friendsList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* LOADING & DISABLED STATES */
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* CONFIRMATION MODAL */
+
+#confirmModal .modal-body {
+  padding: 20px;
+}
+
+#confirmModalMessage {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#confirmModal .modal-footer {
+  border-top: 1px solid #dee2e6;
+  padding: 15px;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 767px) {
+  /* Member Items */
+  .member-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .member-actions {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  /* Group Info Actions */
+  #groupInfoActions {
+    flex-direction: column;
+  }
+
+  #groupInfoActions .btn {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  /* Lists */
+  .members-list,
+  .friends-list,
+  #friendsList {
+    max-height: 250px;
+  }
+
+  /* Modals */
+  #createGroupModal .modal-dialog,
+  #groupInfoModal .modal-dialog,
+  #inviteMembersModal .modal-dialog,
+  #editGroupModal .modal-dialog {
+    margin: 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  /* Sender Name Labels */
+  .sender-name-label {
+    font-size: 11px;
+    margin-left: 28px;
+  }
+
+  /* Badges */
+  .badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  /* Group Info Button */
+  #buttonGroupInfo {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+  /* Member Count Indicator */
+  .member-count-indicator {
+    font-size: 12px;
+  }
+}
+
+/* LAYOUT FIX FOR GROUP CHAT PAGE */
+
+/* Ensure html and body are scrollable */
+html {
+  overflow-y: auto !important;
+  height: 100%;
+}
+
+body {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100vh;
+  padding-top: 70px !important; /* Space for fixed navbar */
+}
+
+/* Fix the main container (not centered, not restricted height) */
+.mainChatDiv {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.mainChatDiv main {
+  align-items: flex-start !important; /* Don't center vertically */
+  min-height: 0 !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Reduce excessive spacing from container */
+.mainChatDiv .container {
+  margin-top: 1rem !important; /* Override mt-5 */
+  padding-top: 0 !important; /* Override pt-5 */
+}
+
+/* Ensure row is visible */
+.mainChatDiv .row {
+  overflow: visible !important;
+}
+
+/* Ensure members sidebar and its container are visible */
+.flex-shrink-0:has(#membersSidebar) {
+  display: block !important;
+  overflow: visible !important;
+}
+
+/* Align members sidebar with chatbox modal */
+#membersSidebar {
+  display: block !important;
+  overflow-y: auto !important;
+  padding: 15px; /* Match modal-body padding */
+  margin: 20px; /* Add spacing around sidebar */
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+}
+
+/* Add top padding to Members heading to align with modal header */
+.flex-shrink-0:has(#membersSidebar) h5 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* HEIGHT-BASED RESPONSIVE (Short Screens) */
+
+@media (max-height: 760px) and (min-width: 992px) {
+  /* On short height but wide screens, keep members on right but make compact */
+  #membersSidebar {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-height: 760px) and (max-width: 991px) {
+  /* Reduce members sidebar height when below chat */
+  #membersSidebar {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+}
+
+/* TOUCH INTERACTION OPTIMIZATIONS */
+
+@media (hover: none) {
+  .member-item:hover {
+    background-color: transparent;
+  }
+
+  #buttonGroupInfo:hover {
+    background-color: #6c757d;
+    transform: none;
+  }
+}
+
+/* Touch Feedback */
+#buttonGroupInfo,
+.member-item {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Prevent Text Selection on Interactive Elements */
+#buttonGroupInfo,
+.member-actions .btn,
+.form-check-label {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ACCESSIBILITY IMPROVEMENTS */
+
+/* Focus States */
+#buttonGroupInfo:focus,
+.btn:focus,
+.form-check-input:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .badge {
+    border: 1px solid currentColor;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .member-item,
+  #buttonGroupInfo,
+  .online-status {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* MESSAGE LOADER (Lazy Loading) */
+
+/* Loading Indicator */
+#message-loading-indicator {
+  text-align: center;
+  padding: 10px;
+  color: #888;
+  font-size: 12px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#message-loading-indicator i {
+  animation: spin 1s linear infinite;
+}
+
+/* Sender Name in Group Messages */
+.sender-name {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+/* Message Container Optimization */
+#bodyMsg {
+  scroll-behavior: smooth;
+}
+
+/* Loading State for Message Container */
+#bodyMsg.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Smooth Scroll Restoration */
+#bodyMsg::-webkit-scrollbar {
+  width: 8px;
+}
+
+#bodyMsg::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#bodyMsg::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#bodyMsg::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Optimized Message Rendering */
+.divTo[data-message-id],
+.divFrom[data-message-id],
+.divToText[data-message-id],
+.divFromText[data-message-id] {
+  will-change: transform;
+}
+
+/* Loading Error Message */
+.message-load-error {
+  text-align: center;
+  padding: 10px;
+  color: #d9534f;
+  font-size: 12px;
+  background: #f2dede;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.message-load-error i {
+  font-size: 14px;
+}
+
+/* Responsive Adjustments for Message Loader */
+@media (max-width: 767px) {
+  #message-loading-indicator,
+  .message-load-error {
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .sender-name {
+    font-size: 10px;
+  }
+}
+
+/* ACTIVE MEMBERS SIDEBAR */
+
+/* Members Sidebar Container */
+#membersSidebar {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #dee2e6;
+  max-height: 500px;
+  overflow-y: auto;
+  min-width: 330px;
+}
+
+/* Member Row in Sidebar */
+.member-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.member-row:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.member-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Left Info Container */
+.left-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Status Dot */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.status-dot.status-online {
+  background-color: #28a745;
+  box-shadow: 0 0 6px rgba(40, 167, 69, 0.6);
+  animation: pulse-dot 2s infinite;
+}
+
+.status-dot.status-offline {
+  background-color: salmon;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 6px rgba(40, 167, 69, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(40, 167, 69, 0.8);
+  }
+}
+
+/* Member Avatar in Sidebar */
+.member-row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Username Label */
+.username-label {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+  flex: 1;
+  min-width: 0;
+  cursor: help;
+}
+
+/* Status Label */
+.status-label {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.status-label.active {
+  color: #28a745;
+  background-color: #d4edda;
+}
+
+.status-label.offline {
+  color: #6c757d;
+  background-color: #e9ecef;
+}
+
+/* Owner Badge in Sidebar */
+.member-row .badge.bg-primary {
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Sidebar Scrollbar */
+#membersSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+#membersSidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+#membersSidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+#membersSidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Empty State */
+#membersSidebar:empty::after {
+  content: "No members";
+  display: block;
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* SYSTEM MESSAGES */
+
+/* System Message Container */
+.system-message {
+  text-align: center;
+  margin: 10px 0;
+  position: relative;
+  color: #888;
+  font-size: 12px;
+}
+
+.system-message::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #dee2e6 20%,
+    #dee2e6 80%,
+    transparent
+  );
+}
+
+.system-message span {
+  background: #f0f0f0;
+  padding: 5px 10px;
+  position: relative;
+  font-size: 13px;
+  color: #6c757d;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  display: inline-block;
+  font-weight: 500;
+}
+
+/* System Message Icons */
+.system-message.member-added span::before {
+  content: "👋 ";
+}
+
+.system-message.member-left span::before {
+  content: "👋 ";
+}
+
+.system-message.settings-updated span::before {
+  content: "⚙️ ";
+}
+
+/* System Message Variants */
+.system-message.success span {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.system-message.info span {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+.system-message.warning span {
+  background-color: #fff3cd;
+  border-color: #ffeaa7;
+  color: #856404;
+}
+
+/* RESPONSIVE - MEMBERS SIDEBAR */
+
+@media (max-width: 991px) {
+  /* Collapse sidebar on tablets and below */
+  #membersSidebar {
+    max-height: 300px;
+    margin-top: 20px;
+  }
+
+  /* Center the members sidebar container when stacked below chat */
+  .flex-shrink-0 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .member-row {
+    padding: 10px;
+  }
+
+  .member-row img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .username-label {
+    font-size: 13px;
+  }
+
+  .status-label {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Stack sidebar below chat on mobile */
+  #membersSidebar {
+    max-height: 250px;
+    margin-top: 15px;
+    padding: 10px;
+  }
+
+  /* Center the members sidebar container on mobile */
+  .flex-shrink-0 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100% !important;
+    max-width: 400px;
+  }
+
+  .member-row {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .member-row img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .username-label {
+    font-size: 12px;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .status-label {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .member-row .badge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  /* System Messages on Mobile */
+  .system-message span {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+/* TOUCH OPTIMIZATIONS FOR SIDEBAR */
+
+@media (hover: none) {
+  .member-row:hover {
+    background-color: white;
+    box-shadow: none;
+  }
+
+  .member-row:active {
+    background-color: #f0f0f0;
+  }
+}
+
+/* Prevent text selection in sidebar */
+#membersSidebar {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* ACCESSIBILITY - SIDEBAR */
+
+/* Focus states for keyboard navigation */
+.member-row:focus-within {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .member-row {
+    border-width: 2px;
+  }
+
+  .status-dot {
+    border: 2px solid currentColor;
+  }
+
+  .system-message span {
+    border-width: 2px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .status-dot,
+  .member-row,
+  .system-message span {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Typing indicator */
+#typing-indicator {
+  min-height: 24px;
+  visibility: hidden;
+  padding: 4px 0;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+  text-align: left;
+}

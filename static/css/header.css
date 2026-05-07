@@ -1,0 +1,1415 @@
+/* BASE & RESET */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+/* Global text selection color */
+::selection {
+  background-color: #007bff;
+  color: white;
+}
+
+main {
+  margin-top: auto;
+  padding-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* GLOBAL OVERRIDES */
+
+/* Override Bootstrap's line-height: 2 for buttons */
+button,
+.btn,
+input[type="submit"],
+input[type="button"] {
+  line-height: 1.5 !important;
+}
+
+.btn-danger {
+  background-color: salmon;
+  border-color: salmon;
+}
+
+.btn-success {
+  background-color: #198754c9;
+  border-color: #198754c9;
+}
+
+.btn-outline-danger {
+  color: salmon;
+  border-color: salmon;
+}
+
+.alert-primary {
+  border-radius: 10px;
+}
+
+.alert-secondary {
+  border-radius: 10px;
+}
+
+.alert-danger {
+  border-radius: 10px;
+}
+
+.alert-success {
+  border-radius: 10px;
+}
+
+.alert-warning {
+  border-radius: 10px;
+}
+
+.alert-white {
+  color: white;
+  background-color: #6c757d;
+  border-radius: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  min-width: 360px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* NAVIGATION */
+
+/* Nav links with badges (only underline the text, not the badge) */
+.nav-link:has(.nav-text) {
+  text-decoration: none !important;
+}
+
+.nav-link:has(.nav-text):hover {
+  text-decoration: none !important;
+}
+
+.nav-link:hover .nav-text {
+  text-decoration: underline;
+}
+
+/* Ensure navbar and all nav-items are vertically centered */
+.navbar {
+  align-items: center !important;
+}
+
+.navbar-collapse {
+  align-items: center !important;
+}
+
+.navbar-nav {
+  align-items: center !important;
+}
+
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  line-height: 1.5; /* Match text line-height */
+}
+
+/* Align profile image nav-item with other nav-items (nav-links) */
+.navbar-nav .nav-item:first-child {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0; /* Remove default padding to match nav-link alignment */
+}
+
+.navbar-nav .nav-item:first-child > div {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem; /* Match nav-link padding exactly (0.5rem vertical, 0.5rem horizontal when expanded) */
+  height: 100%;
+  min-height: 2.5rem; /* Ensure minimum height matches nav-link */
+}
+
+.navbar-nav .nav-item:first-child strong {
+  line-height: 1.5; /* Match nav-link line-height */
+  margin: 0;
+  padding: 0;
+  vertical-align: middle; /* Align with nav-link text */
+  display: inline-block; /* Ensure proper alignment */
+}
+
+.alert-notifications {
+  color: white;
+  background-color: salmon;
+  border-radius: 10rem; /* Circular pill shape */
+  margin-left: 5px;
+  padding: 0.2em 0.6em;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline-block;
+  text-decoration: none !important; /* Prevent underline on hover */
+  vertical-align: middle;
+  line-height: 1.2;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+/* LAYOUT & CARDS */
+
+#card-search {
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 0;
+}
+
+#card-searchUp {
+  width: 650px;
+}
+
+#card-friend-search-outer {
+  width: 680px;
+}
+
+#card-friend-search {
+  height: 589px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 0;
+}
+
+#card-friend {
+  height: 551px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  padding: 0;
+}
+
+/* Responsive height utility class */
+.responsive-height {
+  min-height: 98vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/* Responsive container utility */
+.responsive-container {
+  margin-top: 5rem;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* AUTH PAGES */
+
+.logo-login {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 200px;
+  width: 200px;
+  padding: 0;
+  margin-top: 76px;
+  border-radius: 7px;
+}
+
+.logo-login:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo-signup {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 200px;
+  width: 200px;
+  padding: 0;
+  margin-top: 76px;
+  border-radius: 7px;
+}
+
+.logo-signup:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#signup-form {
+  margin-top: 30px;
+}
+
+/* Authentication error message (shown on login when email not verified) */
+.auth-msg-body {
+  line-height: 1.6;
+}
+
+.auth-msg-btn-row {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.auth-resend-btn {
+  white-space: nowrap;
+  padding: 8px 16px;
+}
+
+#faForgot {
+  font-size: 100px;
+}
+
+/* PROFILE & IMAGES */
+
+#logo {
+  height: 36px;
+}
+
+#profileImage {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+img#headerProfileImage {
+  border-radius: 50% !important;
+  width: 45px !important;
+  height: 45px !important;
+  min-width: 45px !important;
+  min-height: 45px !important;
+  max-width: 45px !important;
+  max-height: 45px !important;
+  object-fit: cover !important;
+  margin-right: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+#homepage-center-profile-image {
+  border-radius: 50% !important;
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+}
+
+#profileImgInFriendsActive {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border: 2px solid green;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#profileImgInFriendsInactive {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Neutral profile image for Search page (no status indication for privacy) */
+#profileImgInSearch {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Pulse effect for active friends */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}
+
+#profileImgInFriendsActive:hover {
+  animation: pulse 2s infinite;
+}
+
+.onlineColor {
+  color: lightgreen;
+}
+
+.offlineColor {
+  color: salmon;
+}
+
+/* PROFILE PAGE */
+
+/* Long name truncation with tooltip for notifications and profile */
+#username-display,
+#email-display,
+.notification-item strong,
+#card-search strong,
+#card-friend strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  display: inline-block;
+  cursor: help;
+  vertical-align: baseline; /* Ensure proper alignment with labels */
+}
+
+/* Ensure tooltips show on hover for truncated text */
+#username-display,
+#email-display {
+  cursor: help; /* Show help cursor to indicate tooltip */
+}
+
+#username-display[title]:hover,
+#email-display[title]:hover {
+  position: relative;
+}
+
+/* Profile page specific alignment */
+.form-group .d-flex.align-items-center {
+  line-height: 1.5;
+  gap: 0.5rem; /* Gap between label and value */
+}
+
+.form-group .d-flex.align-items-center span:first-child {
+  min-width: 130px; /* Consistent label width */
+  flex-shrink: 0;
+  white-space: nowrap; /* Prevent label from wrapping */
+}
+
+/* Increase max-width for username/email display in profile page */
+#card-profile-outer #username-display,
+#card-profile-outer #email-display {
+  max-width: 250px;
+}
+
+/* Make profile card container wider by ~50px */
+#card-profile-outer {
+  max-width: calc(100% + 50px);
+}
+
+/* For the card wrapper on profile page */
+.profile-page .card,
+.profile-page .col-12.col-sm-10.col-md-7.col-lg-5.col-xl-4 .card {
+  max-width: calc(100% + 50px);
+}
+
+.profile-card-full {
+  max-width: calc(100% + 50px);
+}
+
+#blackBigUsername {
+  color: black;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+/* FORM COMPONENTS */
+
+#view-password {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Eye icon alignment */
+.eye-icon {
+  vertical-align: -0.55rem;
+}
+
+/* Password eye icon toggle states */
+.eye-active {
+  color: #007bff !important;
+}
+
+.eye-inactive {
+  color: #7a797e !important;
+}
+
+#button-delete-profile-img {
+  margin-top: 3px;
+}
+
+#button-delete {
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+/* Ensure button container has consistent width */
+.form-group #right {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* UTILITIES */
+
+#right {
+  text-align: right;
+}
+
+#left {
+  text-align: left;
+}
+
+#center {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+#black {
+  color: black;
+}
+
+#white {
+  color: white;
+}
+
+.span-blue {
+  color: #007bff;
+}
+
+#blue {
+  color: #007bff;
+}
+
+#salmon {
+  color: salmon;
+}
+
+#underline {
+  text-decoration: underline;
+}
+
+#max-width {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.red {
+  color: red;
+}
+
+/* Loading state for images (used by index-page.js) */
+.img-loading {
+  opacity: 0.5;
+}
+
+/* Profile field truncation (username/email display in profile page) */
+.profile-field-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+  display: inline-block;
+}
+
+/* SCROLLBAR */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background: rgba(108, 117, 125, 0.5); /* secondary color with transparency */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #6c757d; /* solid secondary color on thumb hover */
+}
+
+/* Firefox scrollbar auto-hide */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+*:hover {
+  scrollbar-color: rgba(108, 117, 125, 0.5) transparent;
+}
+
+/* Firefox-only: reserve right-side space so overlay scrollbars (enabled by default in Firefox on Windows 11). */
+@-moz-document url-prefix() {
+  #card-friend,
+  #card-friend-search,
+  #card-search,
+  #groupsList {
+    padding-right: 12px;
+  }
+}
+
+/* Hide Edge/IE built-in password reveal and clear buttons so our custom
+eye-icon toggle stays the single control across all browsers. */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+/* Height-based breakpoints */
+@media (max-height: 700px) {
+  .responsive-height {
+    min-height: calc(100vh - 80px);
+    align-items: center;
+  }
+}
+
+@media (max-height: 500px) {
+  .responsive-height {
+    align-items: center;
+  }
+}
+
+@media (max-height: 700px) {
+  .responsive-container {
+    margin-top: 1rem;
+    padding-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .responsive-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Width-based breakpoints (small to large) */
+
+/* Stack logo above card on tablet and smaller screens */
+@media (max-width: 991px) {
+  .row:has(.logo-login),
+  .row:has(.logo-signup) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-login,
+  .logo-signup {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Responsive Media Queries */
+@media (max-width: 767px) {
+  /* Global Overflow Prevention */
+  html {
+    overflow-x: hidden;
+    min-width: 360px;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-width: 360px;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Ensure no elements exceed viewport width */
+  * {
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Fix Bootstrap container overflow */
+  .container {
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  /* Ensure row is perfectly centered */
+  .row {
+    max-width: 100vw;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: auto;
+    max-height: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: auto;
+    padding-top: 70px;
+  }
+
+  /* Fix responsive-height class on mobile (allow scrolling) */
+  .responsive-height {
+    min-height: auto !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    align-items: flex-start !important;
+  }
+
+  /* Fix vw-100 to not cause horizontal scroll */
+  .vw-100 {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+
+  /* Fix navbar container-fluid layout on mobile */
+  .navbar .container-fluid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  /* Ensure toggler doesn't shrink */
+  .navbar .navbar-toggler {
+    flex-shrink: 0 !important;
+    order: 1;
+  }
+
+  /* Search form on same line as toggler when menu is closed */
+  .navbar .container-fluid > form.d-flex {
+    flex-shrink: 1 !important;
+    flex-grow: 1 !important;
+    order: 2;
+    max-width: calc(100% - 70px) !important;
+    margin-left: 10px !important;
+  }
+
+  /* Collapse menu takes full width and appears below toggler/search row */
+  .navbar .navbar-collapse {
+    order: 3;
+    flex-basis: 100% !important;
+    width: 100%;
+  }
+
+  /* When menu is open: toggler alone on top, then menu, then search at bottom */
+  .navbar .container-fluid.menu-open {
+    justify-content: flex-start !important;
+  }
+
+  .navbar .container-fluid.menu-open > .navbar-toggler {
+    order: 1;
+    flex-basis: auto;
+  }
+
+  .navbar .container-fluid.menu-open > .navbar-collapse {
+    order: 2;
+    flex-basis: 100% !important;
+  }
+
+  .navbar .container-fluid.menu-open > form.d-flex {
+    order: 3 !important;
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding: 0 5px;
+  }
+
+  /* Header Search Form Mobile Optimization */
+  .navbar .d-flex {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .navbar .d-flex input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    padding: 8px 10px;
+    margin-right: 5px;
+  }
+
+  .navbar .d-flex button[type="submit"] {
+    flex-shrink: 0;
+    min-width: 80px;
+    padding: 8px 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Card Responsiveness */
+  #card-searchUp,
+  #card-friend-search-outer {
+    width: 100%;
+    min-width: 300px;
+    max-width: 340px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+    float: none !important;
+  }
+
+  #card-profile-outer,
+  #card-contact {
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+
+  #card-search,
+  #card-friend,
+  #card-friend-search {
+    height: auto;
+    max-height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  /* Allow body to scroll on mobile */
+  body {
+    overflow-y: auto !important;
+    max-height: none !important;
+    min-height: 100vh;
+  }
+
+  .card {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 340px;
+    box-sizing: border-box;
+    float: none !important;
+    display: block !important;
+  }
+
+  /* Fix search forms inside cards */
+  .card .d-flex {
+    flex-wrap: nowrap;
+    gap: 5px;
+  }
+
+  .card .d-flex input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    font-size: 14px;
+    padding: 8px 10px;
+    margin-right: 5px;
+  }
+
+  .card .d-flex button[type="submit"] {
+    flex-shrink: 0;
+    padding: 8px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Image Responsiveness */
+  #homepage-center-profile-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  #profileImage,
+  #headerProfileImage,
+  #profileImgInFriendsActive,
+  #profileImgInFriendsInactive,
+  #profileImgInSearch {
+    width: 46px !important;
+    height: 46px !important;
+    flex-shrink: 0;
+  }
+
+  /* Override for header profile image (keep at 45px) */
+  img#headerProfileImage {
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    min-height: 45px !important;
+    max-width: 45px !important;
+    max-height: 45px !important;
+  }
+
+  /* Logo Responsiveness */
+  .logo-login,
+  .logo-signup {
+    height: 120px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #logo {
+    height: 28px;
+  }
+
+  #card-friend .form-group.d-flex {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    margin-bottom: 6px;
+  }
+
+  #card-friend #left {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+  }
+
+  #card-friend #left img {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+  }
+
+  #card-friend #left strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    flex: 1;
+    min-width: 0;
+    display: block;
+  }
+
+  #card-friend #right {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 2px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #card-friend #right .form-group {
+    margin: 0;
+    gap: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #card-friend #right #left {
+    max-width: none;
+    flex: none;
+  }
+
+  /* Ensure card-friend has no extra padding */
+  #card-friend,
+  #card-search,
+  #card-friend-search {
+    padding: 0;
+  }
+
+  /* Mobile layout for search/friend-search results */
+  #card-search .form-group.d-flex,
+  #card-friend-search .form-group.d-flex {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    margin-bottom: 6px;
+  }
+
+  #card-search #left,
+  #card-friend-search #left {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+  }
+
+  #card-search #left img,
+  #card-friend-search #left img {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+  }
+
+  #card-search #left strong,
+  #card-friend-search #left strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+    flex: 1;
+    min-width: 0;
+    display: block;
+  }
+
+  #card-search #right,
+  #card-friend-search #right {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 2px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /* Typography Mobile Adjustments */
+  body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  #blackBigUsername {
+    font-size: large;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Touch Interaction Optimizations.
+  Disable hover effects on touch devices. */
+  @media (hover: none) {
+    .card:hover,
+    .logo-login:hover,
+    .logo-signup:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  /* Add active states for touch feedback */
+  button:active,
+  .btn:active,
+  .btn-danger:active,
+  .btn-success:active,
+  .btn-outline-danger:active {
+    transform: scale(0.95);
+  }
+
+  /* Better touch feedback */
+  button,
+  .btn,
+  a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* Prevent text selection on buttons */
+  button,
+  .btn,
+  .btn-danger,
+  .btn-success,
+  .btn-outline-danger {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  /* Ensure minimum touch target sizes */
+  a,
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Landscape Orientation Support */
+@media (max-width: 767px) and (orientation: landscape) {
+  /* Adjust logo sizes for landscape mode */
+  .logo-login,
+  .logo-signup {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Desktop and Tablet Responsive Scaling (768px and above) */
+@media (min-width: 768px) {
+  /* Data/list pages need wider cards */
+  #card-searchUp,
+  #card-friend-search-outer {
+    width: 90%;
+    max-width: 680px;
+    min-width: 360px;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  /* Fix Bootstrap container and row centering */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Global navbar fix for all desktop sizes (992px+) (Prevent wrapping) */
+@media (min-width: 992px) {
+  /* Force navbar to never wrap */
+  .navbar {
+    align-items: center !important;
+  }
+
+  .navbar-collapse {
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+
+  .navbar-nav {
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+  }
+
+  .navbar-nav .nav-item {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  /* Align username and profile with nav-links */
+  .navbar-nav .nav-item:first-child {
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important; /* Remove padding, let inner div handle it */
+  }
+
+  .navbar-nav .nav-item:first-child > div {
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding: 0.5rem 0.5rem !important; /* Match nav-link padding exactly */
+    height: 100% !important;
+    min-height: 2.5rem !important; /* Ensure minimum height matches nav-link */
+  }
+
+  .navbar-nav .nav-item:first-child strong {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    line-height: 1.5 !important; /* Match nav-link line-height */
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important; /* Align with nav-link text */
+  }
+
+  /* Prevent notification badges from causing wraps */
+  .alert-notifications {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    margin-left: 3px !important; /* Maintain left margin */
+  }
+}
+
+/* Navigation spacing fix for tight screens (992px - 1132px) */
+@media (min-width: 992px) and (max-width: 1132px) {
+  /* Minimize navbar padding */
+  .navbar {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  .navbar .container-fluid {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  /* Minimal spacing between nav items */
+  .navbar-nav .nav-item {
+    padding-left: 0.1rem !important;
+    padding-right: 0.1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  /* Fix first nav-item with profile image and username */
+  .navbar-nav .nav-item:first-child {
+    display: flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    padding-right: 0.3rem !important;
+  }
+
+  .navbar-nav .nav-item:first-child div {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.3rem !important;
+    white-space: nowrap !important;
+    padding: 0.5rem 0.3rem !important; /* Match nav-link padding */
+    height: 100% !important;
+    min-height: 2.5rem !important; /* Ensure minimum height matches nav-link */
+  }
+
+  .navbar-nav .nav-item:first-child strong {
+    font-size: 0.8rem !important;
+    white-space: nowrap !important;
+    line-height: 1.5 !important; /* Match nav-link line-height */
+    vertical-align: middle !important;
+    display: inline-block !important;
+  }
+
+  /* Make search form very compact */
+  .navbar .d-flex {
+    gap: 0.2rem !important;
+  }
+
+  .navbar .d-flex input[type="search"] {
+    max-width: 100px !important;
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.4rem !important;
+  }
+
+  .navbar .d-flex button[type="submit"] {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* Reduce profile image size */
+  #profileImage,
+  #headerProfileImage {
+    width: 32px !important;
+    height: 32px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Make notification badges very small */
+  .alert-notifications {
+    font-size: 0.65rem !important;
+    padding: 0.1rem 0.3rem !important;
+    line-height: 1.2 !important;
+    margin-left: 3px !important; /* Maintain left margin */
+  }
+}
+
+/* Navigation spacing for medium screens (1133px - 1199px) */
+@media (min-width: 1133px) and (max-width: 1199px) {
+  /* Reduce navbar padding */
+  .navbar {
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+  }
+
+  .navbar .container-fluid {
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+  }
+
+  /* Reduce spacing between nav items */
+  .navbar-nav .nav-item {
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+    font-size: 0.85rem !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  /* Profile image and username */
+  .navbar-nav .nav-item:first-child div {
+    gap: 0.4rem !important;
+  }
+
+  .navbar-nav .nav-item:first-child strong {
+    font-size: 0.85rem !important;
+  }
+
+  /* Search form - gradual increase */
+  .navbar .d-flex input[type="search"] {
+    max-width: 120px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .navbar .d-flex button[type="submit"] {
+    font-size: 0.85rem !important;
+  }
+
+  /* Profile image */
+  #profileImage,
+  #headerProfileImage {
+    width: 36px !important;
+    height: 36px !important;
+  }
+
+  /* Notification badges */
+  .alert-notifications {
+    font-size: 0.7rem !important;
+    margin-left: 3px !important; /* Maintain left margin */
+  }
+}
+
+/* Navigation spacing for medium-large screens (1200px - 1300px) */
+@media (min-width: 1200px) and (max-width: 1300px) {
+  /* Slightly more comfortable spacing */
+  .navbar-nav .nav-item {
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  /* Profile image and username */
+  .navbar-nav .nav-item:first-child div {
+    gap: 0.5rem !important;
+  }
+
+  /* Search form (more comfortable width) */
+  .navbar .d-flex input[type="search"] {
+    max-width: 150px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .navbar .d-flex button[type="submit"] {
+    font-size: 0.9rem !important;
+  }
+
+  /* Profile image */
+  #profileImage,
+  #headerProfileImage {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Better spacing for larger screens (1300px+) */
+@media (min-width: 1301px) {
+  .navbar-nav .nav-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
