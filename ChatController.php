@@ -313,6 +313,7 @@ class ChatController implements MessageComponentInterface
         $guid = $queryarray['token'];
         if (!$this->isLoggedIn($conn, $guid)) {
             $conn->close(404);
+            return;
         }
         list($user, $error) = getUserByGuid($guid);
         if ($error == "") {
